@@ -1,5 +1,7 @@
 FROM welaika/wordmove:latest
 
+RUN gem install ed25519 bcrypt_pbkdf
+
 RUN apt-get update && apt-get install -y \
 	php-xml \
     && rm -rf /var/lib/apt/lists/*
