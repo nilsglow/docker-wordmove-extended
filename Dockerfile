@@ -3,7 +3,7 @@ FROM welaika/wordmove:latest
 RUN gem install ed25519 bcrypt_pbkdf
 
 RUN apt-get update && apt-get install -y \
-	php-xml \
+	php7.4-xml \
     && rm -rf /var/lib/apt/lists/*
 
 # we override WORDMOVE_WORKDIR from /html because that is a problem in wp-cli db search and replace
